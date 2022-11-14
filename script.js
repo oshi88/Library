@@ -57,12 +57,10 @@ function showLibrary(){
     }
 }
 
-function removeTable(){
-    bookTable.removeChild(bookTable.firstChild);
-}
 
+const divContainer = document.getElementById('bookDisplay');
 function tileCreate(){
-  const divContainer = document.getElementById('bookDisplay');
+  
   while(divContainer.hasChildNodes()){
     divContainer.removeChild(divContainer.firstChild);
   }
@@ -89,19 +87,23 @@ function tileCreate(){
     tile.appendChild(pages);
     tile.appendChild(readstatus);
     tile.appendChild(readBtn);
-    console.table(readBtn.value);
   }
   
 }
 
 function changeReadStatus(e){
   var text = e.target.previousSibling.textContent;
+  var value = e.target.value;
   if(text === 'Yes'){
     text = "No"
   }else if(text ==='No'){
     text = "Yes"
   }
   e.target.previousSibling.innerHTML = text;
-  
-  console.log(text)
+  myLibrary[value].read = text;
+  console.table(myLibrary);
+}
+
+function removeTable(){
+ bookTable.removeChild(bookTable.firstChild);
 }
