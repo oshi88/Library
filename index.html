@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <div class="top-panel"><div>
+    <button onclick="addBook()" style="margin:auto;">Add Book</button>
+    <button onclick="tileCreate()" id="showbtn" value="show" style="margin:auto;">Show</button>
+      <button onclick="removeTable()" id="showbtn" value="show" style="margin:auto;">Remove</button>
+    </div>
+  </div>
+
+<div class="bottom-panel">
+  <div class="left-panel">
+    <table id="bookTable"></table>
+    <div id="bookDisplay"></div>
+  </div>
+
+  <div class="right-panel">
+<div class="heading">New Book</div>
+    <div class="form">
+      <form  id="formEli">
+
+        <label for="title">Book Name:</label>
+        <input type="text"  name="title">
+
+        <label for="author">Author:</label>
+        <input type="text"  name="auhtor">
+        
+        <label for="pages">Pages:</label>
+        <input type="number" name="pages" min="0"><br>
+
+        <div class="readCheckbox">
+        <label for="Read">Completed Reading:</label>
+        <input type="checkbox" name="read" id="bRead"></div>
+
+        <input type="button" value="Add Book" onclick="addBookToLibrary()" class="addBtn">
+      </form></div>
+
+  </div>
+  
+  
+</div>
+ 
+<script src="./script.js"></script>    
+</body>
+</html>

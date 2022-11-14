@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: roboto;
+}
+
+.top-panel{
+    display: flex;
+    width: 100vw;
+    background-color: blueviolet;
+    height: 10vh;
+    position: sticky;
+}
+.top-panel>div{
+    width: 50%;
+    display: flex;
+}
+.top-panel>div>button{
+    color: black;
+    font-weight: bold;
+    font-family: roboto;
+    background: red;
+    border: 0;
+    padding: 6px;
+}.top-panel>div>button:hover{
+    transform: scale(1.1,1.1)
+}
+
+.bottom-panel{
+  background-color:red;
+  color: black;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+}
+
+.right-panel{
+  width: 20vw;
+  background-color:rgb(30, 30, 30);
+  height: 100%;
+  position: fixed;
+  right: 0%;
+  display: flex;
+  flex-direction: column;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  tr:first-child{
+    font-family: roboto;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  form{
+    color: aliceblue;
+    display: flex;
+    font-family: roboto;
+    font-weight: bold;
+    flex-direction: column;
+    padding: 5px;
+  }
+  
+  .addBtn{
+    background-color: aqua;
+    border: 0;
+    font-weight:bold;
+    margin-top: 5px;
+    padding: 5px;
+    cursor: pointer;
+  }.addBtn:hover{
+    background-color: blueviolet;
+  }.addBtn:active{
+    background-color: blue;
+  }
+
+  .heading{
+    color: aliceblue;
+    font-weight: bold;
+    border: 2px solid purple;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .left-panel{
+    width:80vw;
+    background-color: burlywood;
+    height: 100%;
+    flex-wrap: wrap;
+    overflow:auto;
+    
+  }
+ #bookDisplay{
+  width:inherit;
+  display: flex;
+  background-color: burlywood;
+  height: 90%;
+  position: fixed;
+  flex-wrap: wrap;
+  overflow:auto;
+  
+}
+ .tile{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: red;
+    width: 20%;
+    height: 20%;
+    margin: 5%;
+    justify-content:space-evenly;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  }.tile>div{
+    background-color: rgb(0, 140, 255);
+    padding: 5px;
+  }
+.title{
+  font-weight: bold;
+}
