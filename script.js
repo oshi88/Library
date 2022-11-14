@@ -81,7 +81,7 @@ function tileCreate(){
     title.innerHTML = myLibrary[i].title;
     title.classList.add('title')
     const readBtn = document.createElement('button');
-    readBtn.onclick = 'changeReadStatus()';
+    readBtn.onclick = changeReadStatus;
     readBtn.innerHTML = 'Change read';
     readBtn.value = ''+ i;
     tile.appendChild(title);
@@ -94,6 +94,14 @@ function tileCreate(){
   
 }
 
-function changeReadStatus(){
-  this.prototype.B_read = 'Read';
+function changeReadStatus(e){
+  var text = e.target.previousSibling.textContent;
+  if(text === 'Yes'){
+    text = "No"
+  }else if(text ==='No'){
+    text = "Yes"
+  }
+  e.target.previousSibling.innerHTML = text;
+  
+  console.log(text)
 }
